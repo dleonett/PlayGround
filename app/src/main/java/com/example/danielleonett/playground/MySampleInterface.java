@@ -5,4 +5,7 @@ package com.example.danielleonett.playground;
  */
 
 public interface MySampleInterface {
+
+    void mySampleMethod(int mySampleParam);
+
 }

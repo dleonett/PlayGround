@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -42,6 +44,18 @@ public class MainActivity extends BaseActivity implements
         setContentView(R.layout.activity_main);
 
         initViews();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, "onCreateOptionsMenu()");
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected()");
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -99,6 +113,11 @@ public class MainActivity extends BaseActivity implements
         });
     }
 
+    @Override
+    public void mySampleMethod(int mySampleParam) {
+        Log.d(TAG, "mySampleMethod()");
+    }
+
     private void onBtnSubmitClicked() {
         User user = new User(inputName.getText().toString().trim(), 25);
         navigateToDetail(user);
@@ -130,4 +149,5 @@ public class MainActivity extends BaseActivity implements
             showToast(title);
         }
     }
+
 }

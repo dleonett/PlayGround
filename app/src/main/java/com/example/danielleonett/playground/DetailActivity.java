@@ -3,6 +3,7 @@ package com.example.danielleonett.playground;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.danielleonett.playground.base.BaseActivity;
@@ -61,6 +62,11 @@ public class DetailActivity extends BaseActivity implements
         labelTitle.setText(String.format("%s, %s", title, user.getName()));
     }
 
+    @Override
+    public void mySampleMethod(int mySampleParam) {
+        Log.d(TAG, "mySampleMethod()");
+    }
+
     @OnClick(R.id.btnSendOkResult)
     public void onSendOkResultClicked() {
         Bundle args = new Bundle();
@@ -68,4 +74,5 @@ public class DetailActivity extends BaseActivity implements
 
         sendOkResultWithData(args);
     }
+
 }
