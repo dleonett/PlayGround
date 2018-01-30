@@ -22,7 +22,6 @@ public class DetailActivity extends BaseActivity implements
     public static final String TAG = DetailActivity.class.getSimpleName();
     public static final String ARG_TITLE = "ARG_TITLE";
     public static final String ARG_USER = "ARG_USER";
-    public static final int REQUEST_CODE = 1000;
 
     // Views
     @BindView(R.id.labelTitle)
