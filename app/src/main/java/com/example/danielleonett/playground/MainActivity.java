@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.danielleonett.playground.base.BaseActivity;
 import com.example.danielleonett.playground.data.User;
+import com.example.danielleonett.playground.util.Constant;
 
 public class MainActivity extends BaseActivity implements
         MySampleInterface,
@@ -129,7 +130,7 @@ public class MainActivity extends BaseActivity implements
         args.putParcelable(DetailActivity.ARG_USER, user);
 
         startActivityForResult(DetailActivity.newIntent(this, args),
-                DetailActivity.REQUEST_CODE);
+                Constant.RequestCode.DETAIL_ACTIVITY);
     }
 
     @Override
